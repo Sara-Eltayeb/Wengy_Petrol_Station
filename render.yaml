@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: wengy-fuelguard-ai
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/pipeline/latest
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3-flash
+      - key: GOOGLE_SHEETS_API_URL
+        sync: false
+      - key: FRENCH_MARKET_API_URL
+        sync: false
+      - key: FRENCH_MARKET_PETROL_API_URL
+        sync: false
