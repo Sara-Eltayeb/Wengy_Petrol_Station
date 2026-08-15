@@ -76,8 +76,10 @@ function applyFuelRows(rows) {
     setValue(`${key}-percent`, `${percent}%`);
     setValue(`${key}-days`, (stock / averageSales).toFixed(1));
     setValue(`${key}-capacity`, `Capacity ${formatNumber(capacity)}L`);
-    const fill = document.querySelector(`[data-fuel="${key}-fill"]`);
-    if (fill) fill.style.width = `${Math.min(percent, 100)}%`;
+     document.querySelectorAll(`[data-fuel="${key}-fill"]`).forEach((fill) => {
+       fill.style.width = `${Math.min(percent, 100)}%`;
+       if (fill.closest('.tank-visual')) fill.style.height = `${Math.min(percent, 100)}%`;
+     });
     if (key === 'petrol') setValue('reorder-level', formatNumber(Math.round(averageSales * 3)));
     if (key === 'diesel') setValue('safety-stock', formatNumber(Math.round(averageSales * 2)));
   });
