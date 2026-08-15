@@ -1,0 +1,630 @@
+{
+  "id": "2026-08-15T11-07-49-099Z",
+  "startedAt": "2026-08-15T11:07:49.099Z",
+  "completedAt": "2026-08-15T11:08:53.298Z",
+  "sources": {
+    "sheets": {
+      "name": "sheets",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:49.953Z",
+      "data": [
+        {
+          "Date": "2026-08-01",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "35,000 L",
+          "Sales_L": "4,100 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "30,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-02",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "30,900 L",
+          "Sales_L": "4,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-03",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "26,600 L",
+          "Sales_L": "3,900 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "37,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-04",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "37,700 L",
+          "Sales_L": "4,600 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "33,100 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-05",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "33,100 L",
+          "Sales_L": "4,400 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "28,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-06",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "28,700 L",
+          "Sales_L": "4,700 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "24,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-07",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "24,000 L",
+          "Sales_L": "4,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "19,800 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-08",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "19,800 L",
+          "Sales_L": "3,900 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "30,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-09",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "30,900 L",
+          "Sales_L": "4,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-10",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "26,600 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "22,100 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-11",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "22,100 L",
+          "Sales_L": "4,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "17,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-12",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "17,900 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "28,400 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-13",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "28,400 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "23,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-14",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "23,900 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "19,400 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-01",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "38,000 L",
+          "Sales_L": "5,700 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "32,300 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-02",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "32,300 L",
+          "Sales_L": "6,100 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-03",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "26,200 L",
+          "Sales_L": "6,000 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "40,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-04",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "40,000 L",
+          "Sales_L": "6,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "33,800 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-05",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "33,800 L",
+          "Sales_L": "5,900 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "27,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-06",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "27,900 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "21,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-07",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "21,600 L",
+          "Sales_L": "6,100 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "35,500 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-08",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "35,500 L",
+          "Sales_L": "5,800 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "29,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-09",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "29,700 L",
+          "Sales_L": "6,400 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "23,300 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-10",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "23,300 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "17,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-11",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "17,000 L",
+          "Sales_L": "6,000 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "31,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-12",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "31,000 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "24,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-13",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "24,700 L",
+          "Sales_L": "6,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "18,500 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-14",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "18,500 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "12,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        }
+      ]
+    },
+    "daily": {
+      "name": "daily",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:50.565Z",
+      "data": [
+        {
+          "Date": "2026-08-01",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "35,000 L",
+          "Sales_L": "4,100 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "30,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-02",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "30,900 L",
+          "Sales_L": "4,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-03",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "26,600 L",
+          "Sales_L": "3,900 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "37,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-04",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "37,700 L",
+          "Sales_L": "4,600 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "33,100 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-05",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "33,100 L",
+          "Sales_L": "4,400 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "28,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-06",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "28,700 L",
+          "Sales_L": "4,700 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "24,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-07",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "24,000 L",
+          "Sales_L": "4,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "19,800 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-08",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "19,800 L",
+          "Sales_L": "3,900 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "30,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-09",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "30,900 L",
+          "Sales_L": "4,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-10",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "26,600 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "22,100 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-11",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "22,100 L",
+          "Sales_L": "4,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "17,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-12",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "17,900 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "15,000 L",
+          "Closing_Stock_L": "28,400 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-13",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "28,400 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "23,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-14",
+          "Fuel_Type": "Petrol",
+          "Opening_Stock_L": "23,900 L",
+          "Sales_L": "4,500 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "19,400 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-01",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "38,000 L",
+          "Sales_L": "5,700 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "32,300 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-02",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "32,300 L",
+          "Sales_L": "6,100 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "26,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-03",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "26,200 L",
+          "Sales_L": "6,000 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "40,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-04",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "40,000 L",
+          "Sales_L": "6,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "33,800 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-05",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "33,800 L",
+          "Sales_L": "5,900 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "27,900 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-06",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "27,900 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "21,600 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-07",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "21,600 L",
+          "Sales_L": "6,100 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "35,500 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-08",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "35,500 L",
+          "Sales_L": "5,800 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "29,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-09",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "29,700 L",
+          "Sales_L": "6,400 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "23,300 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-10",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "23,300 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "17,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-11",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "17,000 L",
+          "Sales_L": "6,000 L",
+          "Delivery_L": "20,000 L",
+          "Closing_Stock_L": "31,000 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-12",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "31,000 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "24,700 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-13",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "24,700 L",
+          "Sales_L": "6,200 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "18,500 L",
+          "Tank_Capacity_L": "40,000 L"
+        },
+        {
+          "Date": "2026-08-14",
+          "Fuel_Type": "Diesel",
+          "Opening_Stock_L": "18,500 L",
+          "Sales_L": "6,300 L",
+          "Delivery_L": "0 L",
+          "Closing_Stock_L": "12,200 L",
+          "Tank_Capacity_L": "40,000 L"
+        }
+      ]
+    },
+    "config": {
+      "name": "config",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:51.152Z",
+      "data": [
+        {
+          "Station_ID": "DS001",
+          "Station_Name": "Demo Station 01",
+          "Fuel_Type": "Petrol",
+          "Tank_Capacity_L": "40,000 L",
+          "Safety_Stock_L": "8,000 L",
+          "Lead_Time_Days": "2",
+          "Reorder_Level_L": "15,000 L"
+        },
+        {
+          "Station_ID": "DS001",
+          "Station_Name": "Demo Station 01",
+          "Fuel_Type": "Diesel",
+          "Tank_Capacity_L": "40,000 L",
+          "Safety_Stock_L": "10,000 L",
+          "Lead_Time_Days": "2",
+          "Reorder_Level_L": "18,000 L"
+        }
+      ]
+    },
+    "supplier": {
+      "name": "supplier",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:52.006Z",
+      "data": [
+        {
+          "Supplier_ID": "SUP001",
+          "Fuel_Type": "Petrol",
+          "Minimum_Order_L": "5,000 L",
+          "Maximum_Delivery_L": "20,000 L",
+          "Lead_Time_Days": "2",
+          "Status": "Available"
+        },
+        {
+          "Supplier_ID": "SUP002",
+          "Fuel_Type": "Diesel",
+          "Minimum_Order_L": "5,000 L",
+          "Maximum_Delivery_L": "25,000 L",
+          "Lead_Time_Days": "2",
+          "Status": "Available"
+        }
+      ]
+    },
+    "market": {
+      "name": "market",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:52.077Z",
+      "data": {
+        "data": {
+          "id": 1,
+          "scope": "national",
+          "fuelType": "gazole",
+          "avgPrice1d": "2.208",
+          "avgPrice3d": "2.203",
+          "avgPrice7d": "2.186",
+          "minPrice1d": "1.990",
+          "maxPrice1d": "2.728",
+          "trend1d": "0.002",
+          "trend7d": "0.026",
+          "trend7dExact": "0.047",
+          "computedAt": "2026-08-15T02:57:18.934Z"
+        },
+        "meta": {
+          "version": "v1",
+          "generated_at": "2026-08-15T11:05:30.267Z"
+        }
+      }
+    },
+    "marketPetrol": {
+      "name": "marketPetrol",
+      "status": "CONNECTED",
+      "fetchedAt": "2026-08-15T11:07:52.138Z",
+      "data": {
+        "data": {
+          "id": 289,
+          "scope": "national",
+          "fuelType": "e10",
+          "avgPrice1d": "2.006",
+          "avgPrice3d": "1.998",
+          "avgPrice7d": "1.986",
+          "minPrice1d": "1.853",
+          "maxPrice1d": "2.527",
+          "trend1d": "0.007",
+          "trend7d": "0.024",
+          "trend7dExact": "0.039",
+          "computedAt": "2026-08-15T02:57:20.919Z"
+        },
+        "meta": {
+          "version": "v1",
+          "generated_at": "2026-08-15T11:05:30.476Z"
+        }
+      }
+    }
+  },
+  "outputs": {
+    "researcher": "### Executive summary\nAs of 2026-08-15, Diesel inventory at Demo Station 01 (DS001) has fallen significantly below the defined reorder level, while Petrol remains above its threshold but is on a downward trend. Market data indicates a rising price environment for both fuel types in France. A critical data anomaly exists where Diesel stock levels were recorded exceeding physical tank capacity on 2026-08-03.\n\n### Observed data\n*   **Current Inventory (as of 2026-08-14):**\n    *   **Petrol:** 19,400 L (Source: sheets, 2026-08-15T11:07:49.953Z).\n    *   **Diesel:** 12,200 L (Source: sheets, 2026-08-15T11:07:49.953Z).\n*   **Operational Parameters:**\n    *   **Petrol:** Reorder level 15,000 L; Safety stock 8,000 L; Tank capacity 40,000 L (Source: config, 2026-08-15T11:07:51.152Z).\n    *   **Diesel:** Reorder level 18,000 L; Safety stock 10,000 L; Tank capacity 40,000 L (Source: config, 2026-08-15T11:07:51.152Z).\n*   **Consumption Patterns (Aug 01–Aug 14):**\n    *   **Petrol:** Average daily sales of ~4,350 L (Source: sheets, 2026-08-15T11:07:49.953Z).\n    *   **Diesel:** Average daily sales of ~6,120 L (Source: sheets, 2026-08-15T11:07:49.953Z).\n*   **Supplier Constraints:**\n    *   **Petrol (SUP001):** Min order 5,000 L; Max delivery 20,000 L; Lead time 2 days (Source: supplier, 2026-08-15T11:07:52.006Z).\n    *   **Diesel (SUP002):** Min order 5,000 L; Max delivery 25,000 L; Lead time 2 days (Source: supplier, 2026-08-15T11:07:52.006Z).\n\n### Anomalies and risks\n*   **Capacity Breach:** On 2026-08-03, Diesel closing stock was recorded at 40,200 L, which exceeds the stated tank capacity of 40,000 L (Source: sheets, 2026-08-15T11:07:49.953Z).\n*   **Stockout Risk (Diesel):** Current Diesel stock (12,200 L) is 32% below the reorder level (18,000 L) and only 2,200 L above safety stock. At current consumption rates (~6,120 L/day), the station has approximately 2 days of stock remaining before hitting zero, matching the supplier lead time (Source: sheets/config/supplier).\n*   **Inventory Logic Error:** On 2026-08-04, Diesel opening stock was adjusted to 40,000 L despite the previous day's closing stock being 40,200 L, suggesting a manual correction or overflow (Source: sheets, 2026-08-15T11:07:49.953Z).\n\n### Market context\n*   **Diesel (Gazole):** National average price is 2.208 €/L. The 7-day trend shows an increase of 0.026 (Source: market, 2026-08-15T11:05:30.267Z).\n*   **Petrol (E10):** National average price is 2.006 €/L. The 7-day trend shows an increase of 0.024 (Source: marketPetrol, 2026-08-15T11:05:30.476Z).\n*   **Trend:** Both fuels are experiencing upward price pressure, with Diesel prices significantly higher than Petrol (Source: market/marketPetrol).\n\n### Recommendation inputs\n*   **Diesel:** Immediate order required. Current stock (12,200 L) is below the reorder level (18,000 L). A maximum delivery of 25,000 L is permissible (Source: config/supplier).\n*   **Petrol:** Monitor closely. Current stock (19,400 L) is 4,400 L above the reorder level. Based on average sales, the reorder level will likely be breached within 48 hours (Source: sheets/config).\n*   **Procurement Timing:** Rising market trends suggest that earlier procurement may be more cost-effective than delayed ordering (Source: market/marketPetrol).\n\n### Sources and timestamps\n*   **Station Data (Sheets/Daily):** Fetched 2026-08-15T11:07:49.953Z.\n*   **Configuration Data:** Fetched 2026-08-15T11:07:51.152Z.\n*   **Supplier Data:** Fetched 2026-08-15T11:07:52.006Z.\n*   **Market Data (Diesel):** Generated 2026-08-15T11:05:30.267Z; Computed 2026-08-15T02:57:18.934Z.\n*   **Market Data (Petrol):** Generated 2026-08-15T11:05:30.476Z; Computed 2026-08-15T02:57:20.919Z.\n\n### Open questions\n*   Why did the Diesel delivery on 2026-08-03 result in a stock level (40,200 L) exceeding the physical tank capacity (40,000 L)?\n*   Is there a pending delivery for Diesel not yet reflected in the \"Delivery_L\" column for 2026-08-14 or 2026-08-15?\n*   Are there local regional price variations that differ from the national French averages provided?",
+    "designer": "### Design objective\nTo facilitate immediate Diesel replenishment to prevent a stockout within the 2-day lead time window and to provide a predictive trigger for Petrol procurement based on rising market trends and consumption rates.\n\n### Decision flow\n1.  **Diesel Replenishment Trigger:** \n    *   Compare `Closing_Stock_L` (12,200 L) against `Reorder_Level_L` (18,000 L).\n    *   Result: **True**. Initiate immediate order sequence for SUP002.\n2.  **Petrol Monitoring Trigger:** \n    *   Compare `Closing_Stock_L` (19,400 L) against `Reorder_Level_L` (15,000 L).\n    *   Calculate days until breach: (Current Stock - Reorder Level) / Avg Daily Sales (4,350 L) = ~1.01 days.\n    *   Result: **Warning**. Prepare order sequence for SUP001 for next operational cycle.\n3.  **Market Trend Overlay:** \n    *   Check `trend7d` for Gazole (0.026) and E10 (0.024).\n    *   Result: **Bullish**. Prioritize maximum volume orders to hedge against rising procurement costs.\n4.  **Data Integrity Check:** \n    *   Compare `Closing_Stock_L` against `Tank_Capacity_L`.\n    *   Result: **Anomaly Detected** (Diesel, 2026-08-03). Flag for manual reconciliation.\n\n### Required states\n*   **CRITICAL (Diesel):** Stock is 32% below reorder level; estimated 2 days of autonomy remaining.\n*   **PENDING (Petrol):** Stock is above reorder level but projected to breach within 24–48 hours.\n*   **MARKET UPWARD:** National price trends indicate increasing costs for both fuel types.\n*   **CAPACITY BREACH:** Historical data point (2026-08-03) shows stock (40,200 L) > capacity (40,000 L).\n\n### Interface or process specification\n*   **Replenishment Module:**\n    *   **Action A (Diesel):** Primary button \"Execute Diesel Order\". Pre-fill quantity: 25,000 L (Supplier Max). Display \"Lead Time: 2 Days\".\n    *   **Action B (Petrol):** Secondary button \"Queue Petrol Order\". Pre-fill quantity: 20,000 L (Supplier Max). Display \"Projected Reorder Breach: < 24h\".\n*   **Market Intelligence Widget:**\n    *   Display \"Rising Trend\" icon for both Gazole and E10.\n    *   Show \"National Avg: 2.208 €/L (Diesel)\" and \"2.006 €/L (Petrol)\".\n*   **Data Health Banner:**\n    *   Warning: \"Inventory Anomaly: Diesel stock exceeded tank capacity on 2026-08-03. Verify sensor calibration or manual entry logs.\"\n\n### Edge cases\n*   **Lead Time Overlap:** If a Diesel order is placed today (Aug 15), stock may reach Safety Stock (10,000 L) or zero before delivery on Aug 17 if sales exceed the 6,120 L/day average.\n*   **Maximum Delivery Constraint:** Diesel order is capped at 25,000 L by SUP002, which will bring stock to ~37,200 L (below the 40,000 L capacity), avoiding a repeat of the Aug 03 overflow.\n*   **Empty State:** If `sheets` data fails to update for 2026-08-15, the system must default to the last verified state (2026-08-14) and flag \"Stale Data\".\n\n### Maker handoff\n*   **Data Source:** `sheets` for current levels, `config` for thresholds, `supplier` for order logic.\n*   **Diesel Order Logic:** `IF current_stock < 18000 THEN trigger_order(SUP002, 25000)`.\n*   **Petrol Order Logic:** `IF (current_stock - 15000) / 4350 < 2 THEN trigger_warning(SUP001)`.\n*   **Validation Rule:** `IF stock > tank_capacity THEN flag_error`.\n\n### Open questions\n*   Why did the Diesel delivery on 2026-08-03 result in a stock level (40,200 L) exceeding the physical tank capacity (40,000 L)?\n*   Is there a pending delivery for Diesel not yet reflected in the \"Delivery_L\" column for 2026-08-14 or 2026-08-15?\n*   Are there local regional price variations that differ from the national French averages provided?",
+    "maker": "**Build assessment**\nThe proposed workflow is partially implementable but currently unsafe for fully automated execution. The logic for Diesel replenishment (`current_stock < Reorder_Level_L`) and Petrol monitoring is sound. However, the \"Capacity Breach\" identified on 2026-08-03 (40,200 L in a 40,000 L tank) indicates a failure in either the upstream data ingestion or the physical sensor calibration. Implementing an automated order trigger without resolving this anomaly risks triggering orders that could cause physical overflows. Furthermore, while the Designer proposes \"Execute Diesel Order,\" there is no verified API endpoint or credential set for `SUP001` or `SUP002` to receive these payloads.\n\n**Data contracts**\n*   **Input Schema (Verified):** `sheets` (Inventory), `config` (Thresholds), `supplier` (Constraints), `market` (Pricing).\n*   **Proposed Order Payload (Internal):**\n    ```json\n    {\n      \"order_id\": \"string\",\n      \"station_id\": \"DS001\",\n      \"supplier_id\": \"SUP002\",\n      \"fuel_type\": \"Diesel\",\n      \"quantity_l\": 25000,\n      \"requested_delivery_date\": \"2026-08-17\",\n      \"market_price_at_order\": 2.208\n    }\n    ```\n*   **Derived Metrics:** `days_to_stockout` (Current Stock / Avg Daily Sales), `capacity_headroom` (Tank Capacity - Current Stock).\n\n**Validation rules**\n1.  **Physical Constraint:** `Order_Quantity` + `Current_Stock` must be ≤ `Tank_Capacity_L`.\n2.  **Supplier Constraint:** `Order_Quantity` must be ≥ `Minimum_Order_L` AND ≤ `Maximum_Delivery_L`.\n3.  **Data Integrity:** If `Closing_Stock_L` > `Tank_Capacity_L`, the system must lock automated ordering and require manual reconciliation (Status: FAILED for Diesel on 2026-08-03).\n4.  **Staleness Check:** `fetchedAt` for `sheets` data must be within 24 hours of the current system time.\n\n**Test plan**\n*   **Scenario 1: Diesel Critical Replenishment.** Input: Stock 12,200 L, Reorder 18,000 L. Expected: Trigger order for 25,000 L.\n*   **Scenario 2: Petrol Warning.** Input: Stock 19,400 L, Sales 4,350 L/day. Expected: Flag \"Warning\" as stock will hit 15,000 L in < 1.1 days.\n*   **Scenario 3: Overflow Prevention.** Input: Order 25,000 L, Current Stock 18,000 L, Capacity 40,000 L. Expected: Validation error (Total 43,000 L > 40,000 L).\n*   **Scenario 4: Historical Anomaly.** Input: 2026-08-03 data point. Expected: System flags \"Data Health Banner\" and prevents auto-execution.\n\n**Risks and blockers**\n*   **BLOCKER:** No write-access API or authentication protocol established for `SUP001` or `SUP002`. Orders cannot be \"executed,\" only simulated.\n*   **BLOCKER:** The 2026-08-03 Diesel data (40,200 L) violates physical laws for a 40,000 L tank. Automated logic cannot trust the `Closing_Stock_L` value until the source of this 200 L discrepancy is identified.\n*   **RISK:** Diesel autonomy is exactly equal to lead time (2 days). Any delivery delay or sales spike will result in a stockout.\n\n**Marketer handoff**\n*   **Status:** Diesel is in a \"Critical\" state (32% below reorder). Petrol is \"Pending\" (breach expected within 24 hours).\n*   **Market Sentiment:** Bullish. National prices for Gazole (2.208 €/L) and E10 (2.006 €/L) are trending upward (+0.026 and +0.024 respectively).\n*   **Key Message:** Recommend immediate manual procurement of maximum volumes to hedge against rising costs, while investigating the tank capacity anomaly.\n\n**Delivery status**\n**IMPLEMENTATION BLOCKED.** Logic is ready for staging, but execution is halted due to (1) lack of supplier integration APIs and (2) unresolved Diesel inventory data anomalies. System is restricted to \"Read-Only/Advisory\" mode.",
+    "marketer": "**Audience**\nStation Manager, Wengy Petrol Station (DS001), France.\n\n**Positioning**\nReal-time inventory monitoring and procurement advisory focused on threshold maintenance and market trend integration.\n\n**Manager-facing message**\nDiesel inventory is currently 12,200 L, which is 5,800 L below your 18,000 L reorder threshold. With a 2-day supplier lead time and current consumption rates, replenishment is necessary to avoid reaching safety stock levels. Petrol inventory is at 19,400 L and is projected to reach its reorder level (15,000 L) within the next 24 hours. National market data indicates an upward price trend for both fuel types. Additionally, a historical data anomaly from August 3rd shows recorded stock exceeding physical tank capacity; please verify sensor calibration.\n\n**Supporting proof**\n*   **Diesel:** Current stock (12,200 L) is 32% below reorder level. Daily sales average 6,120 L.\n*   **Petrol:** Current stock (19,400 L) is 4,400 L above reorder level. Daily sales average 4,350 L.\n*   **Market:** 7-day price trends show an increase of 0.026 €/L for Gazole and 0.024 €/L for E10.\n*   **Data Integrity:** On 2026-08-03, Diesel stock was logged at 40,200 L in a 40,000 L capacity tank.\n\n**Call to action**\n1. Manually initiate Diesel order for up to 25,000 L (Supplier SUP002).\n2. Prepare Petrol order for up to 20,000 L (Supplier SUP001) for the next operational cycle.\n3. Inspect Diesel tank sensors or manual logs for the August 3rd capacity discrepancy.\n\n**Claims to avoid**\n*   Do not promise specific financial savings from market-timed ordering.\n*   Do not claim the system can execute orders automatically (API integration is currently unavailable).\n*   Do not guarantee 100% stock availability if sales exceed the 14-day average.\n*   Do not ignore the 200 L capacity breach in Diesel records.\n\n**Manager handoff**\n*   **Diesel Status:** Critical. Stock is below reorder level; 2 days of autonomy remaining.\n*   **Petrol Status:** Pending. Reorder breach expected within 24 hours.\n*   **Market Sentiment:** Bullish (Rising prices).\n*   **System Mode:** Advisory only. Manual procurement execution is required.",
+    "manager": "Pipeline readout\nThe Researcher identified a critical Diesel shortage and a historical data anomaly. The Designer proposed an automated replenishment interface with \"Execute\" functionality. However, the Maker issued a hard block on automated execution due to missing supplier API integrations and the unresolved Diesel capacity breach from 2026-08-03. The Marketer has correctly pivoted the output to a manual advisory for the Station Manager.\n\nStation condition\nDiesel is in a CRITICAL state, currently at 12,200 L, which is 32% below the reorder level (18,000 L) and provides only ~2 days of autonomy—exactly matching the supplier lead time. Petrol is on WATCH at 19,400 L, projected to breach its reorder level (15,000 L) within 24 hours based on a 4,350 L/day burn rate.\n\nPriority decision\nCRITICAL. Immediate manual intervention is required for Diesel to prevent a stockout.\n\nRecommended next action\n1. Manually place a Diesel order for 25,000 L (Supplier SUP002) to maximize volume ahead of rising market prices.\n2. Prepare a Petrol order for 20,000 L (Supplier SUP001) for execution on 2026-08-16.\n3. Conduct a physical tank/sensor audit to reconcile the 2026-08-03 data point where Diesel stock (40,200 L) exceeded tank capacity (40,000 L).\n\nQuality gate\nThe pipeline fails the \"Maker\" validation for automated execution. While the logic is sound, the lack of write-access APIs for suppliers and the presence of a \"Capacity Breach\" anomaly (Validation Rule 3) necessitate a \"Read-Only/Advisory\" status. The Designer's proposal for \"Execute\" buttons is currently non-functional.\n\nEvidence used\n- `sheets`: Confirms Diesel at 12,200 L and Petrol at 19,400 L (2026-08-14).\n- `config`: Defines Diesel reorder at 18,000 L and Petrol at 15,000 L.\n- `supplier`: Confirms 2-day lead time and max delivery volumes (25k Diesel / 20k Petrol).\n- `market/marketPetrol`: Shows bullish 7-day trends (+0.026 Gazole / +0.024 E10).\n\nUnresolved items\n- Root cause of the 200 L Diesel overflow recorded on 2026-08-03.\n- Establishment of authenticated API endpoints for SUP001 and SUP002.\n\nVERDICT: REVISION REQUIRED. The Designer's proposal for automated \"Execute\" buttons is technically unfeasible as the Maker reports no API integration and active data integrity blocks."
+  }
+}
