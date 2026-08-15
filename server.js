@@ -126,28 +126,36 @@ async function requestGemini(model, persona, input) {
 }
 
 async function requestOpenRouter(agent, persona, input) {
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-      'Content-Type': 'application/json',
-      'HTTP-Referer': process.env.FRONTEND_ORIGIN || 'https://sara-eltayeb.github.io',
-      'X-Title': 'Wengy FuelGuard AI'
-    },
-    body: JSON.stringify({
-      model: process.env.OPENROUTER_MODEL || 'openai/gpt-4o-mini',
-      messages: [
-        { role: 'system', content: persona },
-        { role: 'user', content: input }
-      ],
-      temperature: 0.2
-    })
-  });
-  if (!response.ok) throw new Error(`OpenRouter ${response.status}: ${await response.text()}`);
-  const payload = await response.json();
-  const text = payload.choices?.[0]?.message?.content;
-  if (!text) throw new Error('OpenRouter returned no text');
-  return text;
+  const models = [process.env.OPENROUTER_MODEL, 'anthropic/claude-3-haiku'].filter((model, index, list) => model && list.indexOf(model) === index);
+  let lastError = '';
+  for (const model of models) {
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': process.env.FRONTEND_ORIGIN || 'https://sara-eltayeb.github.io',
+        'X-Title': 'Wengy FuelGuard AI'
+      },
+      body: JSON.stringify({
+        model,
+        messages: [
+          { role: 'system', content: persona },
+          { role: 'user', content: input }
+        ],
+        temperature: 0.2
+      })
+    });
+    if (response.ok) {
+      const payload = await response.json();
+      const text = payload.choices?.[0]?.message?.content;
+      if (!text) throw new Error('OpenRouter returned no text');
+      return text;
+    }
+    lastError = await response.text();
+    if (response.status !== 404) break;
+  }
+  throw new Error(`OpenRouter 404: ${lastError}`);
 }
 
 function extractText(value) {
