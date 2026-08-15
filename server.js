@@ -210,7 +210,8 @@ async function callGemini(agent, input) {
 }
 
 async function callLlm(agent, input) {
-  if (process.env.LLM_PROVIDER === 'openrouter') {
+  const provider = String(process.env.LLM_PROVIDER || '').trim().toLowerCase();
+  if (provider === 'openrouter' || process.env.OPENROUTER_API_KEY) {
     if (!process.env.OPENROUTER_API_KEY) throw new Error('OPENROUTER_API_KEY is not configured');
     const persona = readFileSync(join(root, 'agents', `${agent}.md`), 'utf8');
     return requestOpenRouter(agent, persona, input);
