@@ -27,6 +27,9 @@ const sourceEndpoints = {
   market: 'FRENCH_MARKET_API_URL',
   marketPetrol: 'FRENCH_MARKET_PETROL_API_URL'
 };
+const defaultSourceUrls = {
+  sheets: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSKT9YZb22fbZZ4N4E09kYvD55jhzzpZ8vLpMPXSe4XE6uY1xL9mf6nq9SaXTv0ycbCdNqAeqKdpARc/pub?output=csv'
+};
 
 const allowedOrigins = new Set([
   'http://localhost:3000',
@@ -36,7 +39,7 @@ const allowedOrigins = new Set([
 ].filter(Boolean));
 
 function sourceUrl(name) {
-  const configured = process.env[sourceEndpoints[name]];
+  const configured = process.env[sourceEndpoints[name]] || defaultSourceUrls[name];
   if (configured || name !== 'marketPetrol') return configured;
   const marketUrl = process.env.FRENCH_MARKET_API_URL;
   if (!marketUrl) return undefined;
