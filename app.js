@@ -45,18 +45,26 @@ async function loadLiveData() {
 
 async function loadServerSources() {
   let sources;
+  let snapshotSources;
   try {
     const response = await fetch(apiUrl('/api/sources'));
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     sources = await response.json();
   } catch (error) {
-    try {
-      const snapshot = await fetch('./data/runs/latest.json');
-      if (!snapshot.ok) return;
-      sources = (await snapshot.json()).sources;
-    } catch (snapshotError) {
-      return;
-    }
+    sources = null;
+  }
+  try {
+    const snapshot = await fetch('./data/runs/latest.json');
+    if (snapshot.ok) snapshotSources = (await snapshot.json()).sources;
+  } catch (snapshotError) {
+    // The live API remains the only source when no static snapshot is available.
+  }
+  if (!sources && !snapshotSources) return;
+  if (snapshotSources) {
+    sources = Object.fromEntries(Object.keys(snapshotSources).map((name) => [
+      name,
+      sources?.[name]?.status === 'CONNECTED' ? sources[name] : snapshotSources[name]
+    ]));
   }
   try {
     Object.entries(sources).forEach(([name, source]) => setSource(name, source.status === 'CONNECTED'));
