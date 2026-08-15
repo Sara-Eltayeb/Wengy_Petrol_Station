@@ -11,7 +11,7 @@ services:
       - key: GEMINI_MODEL
         value: gemini-3-flash
       - key: GOOGLE_SHEETS_API_URL
-        sync: false
+        value: https://docs.google.com/spreadsheets/d/e/2PACX-1vSKT9YZb22fbZZ4N4E09kYvD55jhzzpZ8vLpMPXSe4XE6uY1xL9mf6nq9SaXTv0ycbCdNqAeqKdpARc/pub?output=csv
       - key: FRENCH_MARKET_API_URL
         sync: false
       - key: FRENCH_MARKET_PETROL_API_URL
