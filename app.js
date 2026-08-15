@@ -42,17 +42,28 @@ async function loadLiveData() {
 }
 
 async function loadServerSources() {
+  let sources;
   try {
     const response = await fetch('/api/sources');
-    if (!response.ok) return;
-    const sources = await response.json();
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    sources = await response.json();
+  } catch (error) {
+    try {
+      const snapshot = await fetch('./data/runs/latest.json');
+      if (!snapshot.ok) return;
+      sources = (await snapshot.json()).sources;
+    } catch (snapshotError) {
+      return;
+    }
+  }
+  try {
     Object.entries(sources).forEach(([name, source]) => setSource(name, source.status === 'CONNECTED'));
-    applyFuelRows(sources.daily?.data);
+    applyFuelRows(sources.daily?.data || sources.sheets?.data);
     applyMarketData(sources.market?.data);
     applyMarketData(sources.marketPetrol?.data);
     document.getElementById('refresh-time').textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   } catch (error) {
-    // Direct file previews remain in the explicit unavailable state.
+    // Keep the dashboard usable if a source has an unexpected shape.
   }
 }
 
@@ -75,13 +86,19 @@ function applyFuelRows(rows) {
     setValue(`${key}-litres`, formatNumber(stock));
     setValue(`${key}-percent`, `${percent}%`);
     setValue(`${key}-days`, (stock / averageSales).toFixed(1));
-    setValue(`${key}-capacity`, `Capacity ${formatNumber(capacity)}L`);
+    setValue(`${key}-capacity`, `${formatNumber(capacity)} L capacity`);
+    setValue(`${key}-sales`, `${formatNumber(Math.round(averageSales))} L`);
      document.querySelectorAll(`[data-fuel="${key}-fill"]`).forEach((fill) => {
        fill.style.width = `${Math.min(percent, 100)}%`;
        if (fill.closest('.tank-visual')) fill.style.height = `${Math.min(percent, 100)}%`;
      });
     if (key === 'petrol') setValue('reorder-level', formatNumber(Math.round(averageSales * 3)));
     if (key === 'diesel') setValue('safety-stock', formatNumber(Math.round(averageSales * 2)));
+    if (key === 'diesel') {
+      setValue('rec-stock', `${formatNumber(stock)} L`);
+      setValue('rec-coverage', `${(stock / averageSales).toFixed(1)} days`);
+      setValue('rec-order', `${formatNumber(Math.max(0, capacity - stock))} L`);
+    }
   });
 }
 
