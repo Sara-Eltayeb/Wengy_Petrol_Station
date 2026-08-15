@@ -10,6 +10,12 @@ services:
         sync: false
       - key: GEMINI_MODEL
         value: gemini-3-flash
+      - key: LLM_PROVIDER
+        value: openrouter
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: anthropic/claude-3.5-sonnet
       - key: GOOGLE_SHEETS_API_URL
         value: https://docs.google.com/spreadsheets/d/e/2PACX-1vSKT9YZb22fbZZ4N4E09kYvD55jhzzpZ8vLpMPXSe4XE6uY1xL9mf6nq9SaXTv0ycbCdNqAeqKdpARc/pub?output=csv
       - key: FRENCH_MARKET_API_URL

@@ -125,6 +125,31 @@ async function requestGemini(model, persona, input) {
   });
 }
 
+async function requestOpenRouter(agent, persona, input) {
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': process.env.FRONTEND_ORIGIN || 'https://sara-eltayeb.github.io',
+      'X-Title': 'Wengy FuelGuard AI'
+    },
+    body: JSON.stringify({
+      model: process.env.OPENROUTER_MODEL || 'openai/gpt-4o-mini',
+      messages: [
+        { role: 'system', content: persona },
+        { role: 'user', content: input }
+      ],
+      temperature: 0.2
+    })
+  });
+  if (!response.ok) throw new Error(`OpenRouter ${response.status}: ${await response.text()}`);
+  const payload = await response.json();
+  const text = payload.choices?.[0]?.message?.content;
+  if (!text) throw new Error('OpenRouter returned no text');
+  return text;
+}
+
 function extractText(value) {
   if (!value) return '';
   if (typeof value === 'string') return value;
@@ -184,17 +209,26 @@ async function callGemini(agent, input) {
   return text;
 }
 
+async function callLlm(agent, input) {
+  if (process.env.LLM_PROVIDER === 'openrouter') {
+    if (!process.env.OPENROUTER_API_KEY) throw new Error('OPENROUTER_API_KEY is not configured');
+    const persona = readFileSync(join(root, 'agents', `${agent}.md`), 'utf8');
+    return requestOpenRouter(agent, persona, input);
+  }
+  return callGemini(agent, input);
+}
+
 async function runPipeline() {
   const startedAt = new Date().toISOString();
   const sources = {};
   for (const name of Object.keys(sourceEndpoints)) sources[name] = await fetchSource(name);
   const outputs = {};
   const base = `Station: Wengy Petrol Station, France\nSource snapshot:\n${json(sources)}`;
-  outputs.researcher = await callGemini('researcher', `${base}\n\nAnalyse these live source results. Return your required evidence brief.\n${json(sources)}`);
-  outputs.designer = await callGemini('designer', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}`);
-  outputs.maker = await callGemini('maker', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}\n\nDESIGNER ACTUAL OUTPUT:\n${outputs.designer}`);
-  outputs.marketer = await callGemini('marketer', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}\n\nDESIGNER ACTUAL OUTPUT:\n${outputs.designer}\n\nMAKER ACTUAL OUTPUT:\n${outputs.maker}`);
-  outputs.manager = await callGemini('manager', `${base}\n\nRESEARCHER:\n${outputs.researcher}\n\nDESIGNER:\n${outputs.designer}\n\nMAKER:\n${outputs.maker}\n\nMARKETER:\n${outputs.marketer}`);
+   outputs.researcher = await callLlm('researcher', `${base}\n\nAnalyse these live source results. Return your required evidence brief.\n${json(sources)}`);
+   outputs.designer = await callLlm('designer', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}`);
+   outputs.maker = await callLlm('maker', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}\n\nDESIGNER ACTUAL OUTPUT:\n${outputs.designer}`);
+   outputs.marketer = await callLlm('marketer', `${base}\n\nRESEARCHER ACTUAL OUTPUT:\n${outputs.researcher}\n\nDESIGNER ACTUAL OUTPUT:\n${outputs.designer}\n\nMAKER ACTUAL OUTPUT:\n${outputs.maker}`);
+   outputs.manager = await callLlm('manager', `${base}\n\nRESEARCHER:\n${outputs.researcher}\n\nDESIGNER:\n${outputs.designer}\n\nMAKER:\n${outputs.maker}\n\nMARKETER:\n${outputs.marketer}`);
   const run = { id: startedAt.replace(/[:.]/g, '-'), startedAt, completedAt: new Date().toISOString(), sources, outputs };
   writeFileSync(join(runsDir, `${run.id}.json`), json(run));
   writeFileSync(join(runsDir, 'latest.json'), json(run));
