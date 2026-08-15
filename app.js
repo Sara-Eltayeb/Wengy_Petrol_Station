@@ -88,7 +88,7 @@ function applyFuelRows(rows) {
     const fuelRows = rows.filter((row) => String(row.Fuel_Type).toLowerCase() === fuelName.toLowerCase());
     if (!fuelRows.length) return;
     const latest = fuelRows[fuelRows.length - 1];
-    const stock = litres(latest.Closing_Stock_L);
+    const stock = litres(latest.Opening_Stock_L || latest.Closing_Stock_L);
     const capacity = litres(latest.Tank_Capacity_L);
     const recent = fuelRows.slice(-7).map((row) => litres(row.Sales_L)).filter(Boolean);
     const averageSales = recent.reduce((sum, value) => sum + value, 0) / (recent.length || 1);
