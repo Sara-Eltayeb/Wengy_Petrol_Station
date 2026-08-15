@@ -28,6 +28,13 @@ const sourceEndpoints = {
   marketPetrol: 'FRENCH_MARKET_PETROL_API_URL'
 };
 
+const allowedOrigins = new Set([
+  'http://localhost:3000',
+  'http://127.0.0.1:3000',
+  'https://sara-eltayeb.github.io',
+  process.env.FRONTEND_ORIGIN
+].filter(Boolean));
+
 function sourceUrl(name) {
   const configured = process.env[sourceEndpoints[name]];
   if (configured || name !== 'marketPetrol') return configured;
@@ -208,6 +215,16 @@ function serveStatic(request, response) {
 
 const server = createServer(async (request, response) => {
   try {
+    const origin = request.headers.origin;
+    if (allowedOrigins.has(origin)) response.setHeader('Access-Control-Allow-Origin', origin);
+    response.setHeader('Vary', 'Origin');
+    if (request.method === 'OPTIONS') {
+      response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+      response.writeHead(204);
+      response.end();
+      return;
+    }
     if (request.url === '/api/sources') {
       const sources = {};
       for (const name of Object.keys(sourceEndpoints)) sources[name] = await fetchSource(name);

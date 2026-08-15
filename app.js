@@ -1,4 +1,6 @@
 const config = window.FUELGUARD_CONFIG || {};
+const apiBase = String(config.apiBase || '').replace(/\/$/, '');
+const apiUrl = (path) => `${apiBase}${path}`;
 const formatNumber = (value) => new Intl.NumberFormat('en-FR').format(value);
 
 function setValue(key, value) {
@@ -44,7 +46,7 @@ async function loadLiveData() {
 async function loadServerSources() {
   let sources;
   try {
-    const response = await fetch('/api/sources');
+    const response = await fetch(apiUrl('/api/sources'));
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     sources = await response.json();
   } catch (error) {
@@ -167,7 +169,7 @@ function applyPipelineRun(run) {
 
 async function loadLatestPipeline() {
   try {
-    const response = await fetch('/api/pipeline/latest');
+    const response = await fetch(apiUrl('/api/pipeline/latest'));
     if (response.ok) applyPipelineRun(await response.json());
   } catch (error) {
     // The dashboard remains usable when opened without the server.
@@ -178,7 +180,7 @@ pipelineButton.addEventListener('click', async () => {
   pipelineButton.disabled = true;
   pipelineButton.textContent = 'Agents working...';
   try {
-    const response = await fetch('/api/pipeline/run', { method: 'POST' });
+    const response = await fetch(apiUrl('/api/pipeline/run'), { method: 'POST' });
     if (!response.ok) {
       const payload = await response.json().catch(() => ({}));
       throw new Error(payload.error || `Request failed (${response.status})`);
