@@ -47,7 +47,7 @@ async function loadServerSources() {
   let sources;
   let snapshotSources;
   try {
-    const response = await fetch(apiUrl('/api/sources'));
+    const response = await fetch(apiUrl('/api/sources'), { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     sources = await response.json();
   } catch (error) {

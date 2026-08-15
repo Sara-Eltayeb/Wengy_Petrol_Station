@@ -78,7 +78,8 @@ async function fetchSource(name) {
   const url = sourceUrl(name);
   if (!url) return { name, status: 'UNAVAILABLE', reason: 'Endpoint is not configured', fetchedAt: new Date().toISOString() };
   try {
-    const response = await fetch(url, { headers: { Accept: 'application/json' } });
+    const requestUrl = name === 'sheets' ? `${url}${url.includes('?') ? '&' : '?'}_fuelguard=${Date.now()}` : url;
+    const response = await fetch(requestUrl, { cache: 'no-store', headers: { Accept: 'application/json' } });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const contentType = response.headers.get('content-type') || '';
     const body = await response.text();
@@ -284,7 +285,7 @@ const server = createServer(async (request, response) => {
     if (request.url === '/api/sources') {
       const sources = {};
       for (const name of Object.keys(sourceEndpoints)) sources[name] = await fetchSource(name);
-      response.writeHead(200, { 'Content-Type': 'application/json' }); response.end(json(sources));
+      response.writeHead(200, { 'Cache-Control': 'no-store', 'Content-Type': 'application/json' }); response.end(json(sources));
       return;
     }
     if (request.url === '/api/pipeline/latest') { response.writeHead(200, { 'Content-Type': 'application/json' }); response.end(json(latestRun())); return; }
