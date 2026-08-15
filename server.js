@@ -263,6 +263,16 @@ const server = createServer(async (request, response) => {
       response.end();
       return;
     }
+    if (request.url === '/api/status') {
+      response.writeHead(200, { 'Content-Type': 'application/json' });
+      response.end(json({
+        build: 'openrouter-claude',
+        provider: process.env.LLM_PROVIDER || 'gemini',
+        openrouterConfigured: Boolean(process.env.OPENROUTER_API_KEY),
+        geminiConfigured: Boolean(process.env.GEMINI_API_KEY)
+      }));
+      return;
+    }
     if (request.url === '/api/sources') {
       const sources = {};
       for (const name of Object.keys(sourceEndpoints)) sources[name] = await fetchSource(name);
